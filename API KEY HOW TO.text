@@ -1,0 +1,33 @@
+Step-by-Step Guide to Get the Google Safe Browsing API Key
+
+### Step 1: Go to Google Cloud Console
+Open your browser and navigate to the [Google Cloud Console](https://console.cloud.google.com/). Log in with your Google account.
+
+### Step 2: Create a New Project
+In the top navigation bar, click on "Select a project" and then click on "New Project". Provide a Project Name (e.g., "Scam Link Detector") and click "Create".
+
+### Step 3: Enable the Safe Browsing API
+In the left-hand menu, navigate to **APIs & Services** > **Library**. In the search bar, type "Safe Browsing API" and click on the result. Click the "Enable" button.
+
+### Step 4: Create an API Key
+Go to **APIs & Services** > **Credentials** in the left-hand menu. Click "Create Credentials" > **API Key**. Google will generate an API key for you. A pop-up will show the key. Copy the key and save it securely.
+
+### Step 5: Restrict Your API Key (Recommended)
+To prevent unauthorized use of your API key:
+
+* On the Credentials page, find your API key in the list and click the pencil icon to edit it.
+* Under **Application Restrictions**:
+	+ Choose **HTTP referrers (websites)** if you’re building a website, or **IP addresses** if using it for a Python script on a server.
+	+ Add the allowed referrers (e.g., `http://localhost` during development or your production domain).
+* Under **API Restrictions**:
+	+ Select "Restrict key".
+	+ Choose **Safe Browsing API** from the dropdown list.
+	+ Click "Save".
+
+### Step 6: Test the API Key
+Use the key in your Python script or website to verify that it works.
+
+### Tips for Working with the API Key
+* **Security**: Never expose your API key in publicly accessible code repositories.
+* **Monitoring**: Check usage in the **API & Services** > **Dashboard** section of the Cloud Console.
+* **Quotas**: Google Safe Browsing API has a free tier, but it has usage limits. For higher limits, you may need to set up billing.
