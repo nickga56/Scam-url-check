@@ -2,7 +2,7 @@ import requests
 import json
 
 # Replace with your API key
-API_KEY = 'AIzaSyBE0bxC8oFgo89PCDYQNvvl4DCEPLUFkW4'
+API_KEY = 'YOUR API KEY HERE'
 
 # Google Safe Browsing API endpoint
 url = 'https://safebrowsing.googleapis.com/v4/threatMatches:find'
